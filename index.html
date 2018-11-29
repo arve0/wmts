@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kartverkets kart</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <style>
+    body {
+        margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="map" style="height: 100vh; width: 100vw;"></div>
+    <script>
+        var map = L.map('map').setView([60.14, 10.25], 11);
+        L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
+            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+        }).addTo(map);
+    </script>
+</body>
+
+</html>
